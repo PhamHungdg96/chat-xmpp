@@ -1,0 +1,14 @@
+{
+  "name": "xmpp-chat",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
