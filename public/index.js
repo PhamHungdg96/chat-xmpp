@@ -24,7 +24,7 @@ $(document).ready(function () {
 });
 $(document).bind('connect', function (ev, data) {
     var conn = new Strophe.Connection(
-        "http://10.8.0.38:5443/bosh", {sync: true});
+        "wss://chat.lakiti.im/xmpp-websocket/");
     console.log(data.jid, data.password)
     conn.connect(data.jid, data.password, function (status) {
         console.log(status)
