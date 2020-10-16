@@ -24,8 +24,8 @@ $(document).ready(function () {
 });
 $(document).bind('connect', function (ev, data) {
     var conn = new Strophe.Connection(
-        "http://10.8.0.38:5443/bosh", {sync: true});
-    console.log(data.jid, data.password)
+        "wss://chat.example.com/xmpp-websocket");
+    console.log(data)
     conn.connect(data.jid, data.password, function (status) {
         console.log(status)
         console.log(Strophe.Status)
@@ -36,7 +36,7 @@ $(document).bind('connect', function (ev, data) {
             $(document).trigger('disconnected');
             console.log('disconnected')
         }
-    },6000,3);
+    },6000,300);
     Hello.connection = conn;
 });
 $(document).bind('connected', function () {
